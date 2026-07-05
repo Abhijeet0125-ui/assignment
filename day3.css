@@ -1,0 +1,203 @@
+
+/*.parent{
+    width: 50vw;
+    height: 100vh;
+    background-color: aquamarine;
+    border: 20px solid blue;
+    margin-bottom: 40px;
+}
+.child{
+    width: 50%;
+    height: 50%;
+    background-color: red;}
+    */
+
+   /* html
+
+    .parent{
+        font-size: 20px;
+        width: 800px;
+        height: 700px;
+        background-color: red;
+
+    }
+    .child{
+        width: 50em;
+        height: 10em;
+        background-color: beige;
+    }
+*/
+
+/*a{
+    border: 2px solid blue;
+    text-decoration: none;
+    color: blue;
+    display: inline-block;
+    padding-inline: 40px;
+    padding-block: 20px;
+    border-radius: 24px;
+    transition: all 0.25s;
+
+}
+a:hover{
+    background-color: powderblue;
+    color:white;
+}*/
+/*.higher{
+    width: 500px ;
+    height: 700px;
+    background-color: lavender;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent{
+    width: 250px;
+    height: 350px;
+    background-color:powderblue ;
+    position: center;
+
+}
+/*.child{
+    width: 25%;
+    height:40% ;
+    background-color: green;
+    position: relative;
+    bottom: 60px;
+    top: auto;
+}*/
+
+/*.header{
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    background-color: purple;
+    color: white; display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header */
+
+header{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Product Grid */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    padding:30px;
+}
+
+/* Card */
+
+.card{
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    padding:15px;
+    text-align:center;
+    position:relative;
+    transition:0.3s;
+}
+
+/* Hover Effect */
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    margin:10px 0;
+    color:#27ae60;
+}
+
+/* Button */
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background-color: brown;
+}
+
+/* Sale Badge */
+
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:red;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+/* Tablet */
+
+@media (max-width:1199px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:767px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+}
