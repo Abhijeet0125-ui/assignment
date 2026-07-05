@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            width: 320px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: royalblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        .card {
+            margin-top: 20px;
+            width: 320px;
+            background: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Form</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="number" id="age" placeholder="Enter Age">
+
+        <input type="text" id="course" placeholder="Enter Course">
+
+        <button onclick="showDetails()">Show Details</button>
+    </div>
+
+    <div class="card" id="studentCard">
+        <h2>Student Details</h2>
+
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+
+        <p><strong>Age:</strong> <span id="displayAge"></span></p>
+
+        <p><strong>Course:</strong> <span id="displayCourse"></span></p>
+    </div>
+
+    <script>
+        function showDetails() {
+
+            let name = document.getElementById("name").value.trim();
+            let age = document.getElementById("age").value.trim();
+            let course = document.getElementById("course").value.trim();
+
+            if (name === "" || age === "" || course === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("displayName").textContent = name;
+            document.getElementById("displayAge").textContent = age;
+            document.getElementById("displayCourse").textContent = course;
+
+            document.getElementById("studentCard").style.display = "block";
+
+            // Clear input fields
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("course").value = "";
+        }
+    </script>
+
+</body>
+</html>
